@@ -11,16 +11,22 @@ class Clock extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    canvas.translate(size.width/2, size.height/2);
+    canvas.translate(size.width / 2, size.height / 2);
     canvas.scale(1, -1);
 
     final paintCircle = Paint();
     paintCircle.style = PaintingStyle.stroke;
     paintCircle.strokeWidth = 4;
 
-    final r = min(size.height, size.width) / 2 - paintCircle.strokeWidth;
+    final clockRadius =
+        min(size.height, size.width) / 2 - paintCircle.strokeWidth;
+    const minuteMarkLength = 10.0;
+    const hourMarkLength = minuteMarkLength * 2;
+    final minuteHandLength = clockRadius - minuteMarkLength - 20;
+    final hourHandLength = minuteHandLength / 2;
+
     const center = Offset(0, 0);
-    canvas.drawCircle(center, r, paintCircle);
+    canvas.drawCircle(center, clockRadius, paintCircle);
 
     final paintMark = Paint();
     paintMark.style = PaintingStyle.fill;
@@ -30,8 +36,8 @@ class Clock extends CustomPainter {
         paint: paintMark,
         center: center,
         canvas: canvas,
-        lineLingth: 20,
-        radius: r,
+        lineLingth: hourMarkLength,
+        radius: clockRadius,
         radSpacing: 2 * pi / 12);
 
     paintMark.strokeWidth = 2;
@@ -40,8 +46,8 @@ class Clock extends CustomPainter {
         paint: paintMark,
         center: center,
         canvas: canvas,
-        lineLingth: 10,
-        radius: r,
+        lineLingth: minuteMarkLength,
+        radius: clockRadius,
         radSpacing: 2 * pi / 60);
 
     const centerRadius = 5.0;
@@ -52,11 +58,11 @@ class Clock extends CustomPainter {
     paintHand.style = PaintingStyle.fill;
     paintHand.strokeWidth = 6;
 
-    const radPerHour = 2 * pi /12;
-    final hourRad = time.hour % 12 * radPerHour + radPerHour * (time.minute / 60);
-    const hourDistanceFromOuter = 80;
+    const radPerHour = 2 * pi / 12;
+    final hourRad =
+        time.hour % 12 * radPerHour + radPerHour * (time.minute / 60);
     final offsetHourOuter = _offsetOnCircle(
-        radius: r - hourDistanceFromOuter, radians: hourRad, center: center);
+        radius: hourHandLength, radians: hourRad, center: center);
     final offsetHourInner =
         _offsetOnCircle(radius: centerRadius, radians: hourRad, center: center);
     canvas.drawLine(offsetHourOuter, offsetHourInner, paintHand);
@@ -64,11 +70,8 @@ class Clock extends CustomPainter {
     paintHand.strokeWidth = 4;
 
     final minuteRad = time.minute * 2 * pi / 60;
-    const minuteDistanceFromOuter = 30;
     final offsetMinuteOuter = _offsetOnCircle(
-        radius: r - minuteDistanceFromOuter,
-        radians: minuteRad,
-        center: center);
+        radius: minuteHandLength, radians: minuteRad, center: center);
     final offsetMinuteInner = _offsetOnCircle(
         radius: centerRadius, radians: minuteRad, center: center);
     canvas.drawLine(offsetMinuteOuter, offsetMinuteInner, paintHand);
@@ -102,7 +105,6 @@ class Clock extends CustomPainter {
     required double radians,
   }) {
     final rad = -(radians - 2 * pi / 4);
-    return Offset(
-        center.dx + radius * cos(rad), center.dy + radius * sin(rad));
+    return Offset(center.dx + radius * cos(rad), center.dy + radius * sin(rad));
   }
 }
