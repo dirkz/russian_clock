@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    GoogleFonts.config.allowRuntimeFetching = false;
+    
     return MaterialApp(
       title: 'Russian Clock',
       theme: ThemeData(
