@@ -16,13 +16,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RussianClock(title: 'Russian Clock'),
+      home: RussianClock(title: 'Russian Clock', random: Random.secure(),),
     );
   }
 }
 
 class RussianClock extends StatefulWidget {
-  const RussianClock({super.key, required this.title});
+  final Random random;
+
+  const RussianClock({super.key, required this.title, required this.random});
 
   final String title;
 
@@ -51,15 +53,12 @@ class HourMinute {
 enum SolutionState { unsolved, solved }
 
 class _RussianClockState extends State<RussianClock> {
-  final Random _random;
-
   var _solutionState = SolutionState.unsolved;
   HourMinute _currentTime;
 
   _RussianClockState()
-      : _random = Random.secure(),
-        _currentTime = HourMinute(hour: 0, minute: 0) {
-    _currentTime = HourMinute.random(random: _random);
+      : _currentTime = HourMinute(hour: 0, minute: 0) {
+    _currentTime = HourMinute.random(random: widget.random);
   }
 
   @override
