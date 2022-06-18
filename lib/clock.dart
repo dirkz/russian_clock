@@ -11,10 +11,11 @@ class Clock extends CustomPainter {
   
   @override
   void paint(Canvas canvas, Size size) {
-    print("*** paint size $size");
-    final r = min(size.height, size.width);
     final p = Paint();
     p.style = PaintingStyle.stroke;
+    p.strokeWidth = 2;
+
+    final r = min(size.height, size.width)/2 - p.strokeWidth;
     final center = Offset(size.width / 2, size.height / 2);
     canvas.drawCircle(center, r, p);
   }

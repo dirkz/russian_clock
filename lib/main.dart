@@ -55,7 +55,10 @@ class _RussianClockState extends State<RussianClock> {
       body: Column(
         children: [
           Expanded(
-              child: CustomPaint(foregroundPainter: Clock(time: _currentTime))),
+              child: Container(
+                  width: double.infinity,
+                  child: CustomPaint(
+                      foregroundPainter: Clock(time: _currentTime)))),
           Container(
               padding: const EdgeInsets.only(bottom: 10), child: _buttonRow())
         ],
