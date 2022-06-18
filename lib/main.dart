@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'clock.dart';
 import 'time.dart';
 import 'russian_time.dart';
+import 'voices.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,9 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Russian Clock',
       theme: ThemeData(
-        primarySwatch: Colors.grey,
-        textTheme: GoogleFonts.vollkornTextTheme()
-      ),
+          primarySwatch: Colors.grey,
+          textTheme: GoogleFonts.vollkornTextTheme()),
       home: RussianClock(
         title: 'Russian Clock',
         random: Random.secure(),
@@ -57,6 +57,13 @@ class _RussianClockState extends State<RussianClock> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.list),
+            onPressed: _pushVoices,
+            tooltip: 'Voices',
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -101,6 +108,12 @@ class _RussianClockState extends State<RussianClock> {
       _solution = null;
       _currentTime = HourMinute.random(random: widget.random);
     });
+  }
+
+  _pushVoices() {
+    Navigator.of(context).push(MaterialPageRoute<void>(builder: (context) {
+      return const Voices();
+    }));
   }
 
   _buttonRow() {
