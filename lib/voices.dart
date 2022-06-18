@@ -44,11 +44,13 @@ class _VoicesState extends State<Voices> {
                   return Text('Error: ${snapshot.error}');
                 } else {
                   if (snapshot.data == true) {
-                    return const Center(
-                        child: Text('Have Russian as voice language'));
+                    return Center(
+                        child: Text('Have Russian as voice language',
+                            style: Theme.of(context).textTheme.titleLarge));
                   } else {
-                    return const Center(
-                        child: Text('No Russian voice language'));
+                    return Center(
+                        child: Text('No Russian voice language',
+                            style: Theme.of(context).textTheme.titleLarge));
                   }
                 }
             }
