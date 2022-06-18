@@ -48,6 +48,12 @@ class _RussianClockState extends State<RussianClock> {
   _RussianClockState() : _currentTime = HourMinute.random();
 
   @override
+  void initState() {
+    _tts.haveRu().then((value) => _canSpeak = value);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // top/bottom in some places
     const margin = 10.0;
