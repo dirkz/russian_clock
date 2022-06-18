@@ -14,19 +14,13 @@ class _VoicesState extends State<Voices> {
   _VoicesState();
 
   @override
-  void initState() {
-    _haveRu = _tts.haveRu();
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Voices"),
         ),
         body: FutureBuilder<bool>(
-          future: _haveRu, // async work
+          future: _tts.haveRu(), // async work
           builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
             switch (snapshot.connectionState) {
               case ConnectionState.waiting:
@@ -50,8 +44,4 @@ class _VoicesState extends State<Voices> {
   }
 
   final _tts = TTS();
-
-  Future<bool> _haveRu = Future(() {
-    return false;
-  });
 }
