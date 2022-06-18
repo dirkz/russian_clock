@@ -43,7 +43,6 @@ class RussianTime {
     final tester = n % 10;
 
     switch (tester % 10) {
-      // TODO: Check 0
       case 1:
         return "мину́та";
       case 2:
@@ -71,7 +70,6 @@ class RussianTime {
     final tester = n % 10;
 
     switch (tester % 10) {
-      // TODO: Check 0
       case 1:
         return "час";
       case 2:
