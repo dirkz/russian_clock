@@ -148,4 +148,36 @@ void main() {
     expect(RussianTime.genitiveMinute(28), "двадцати́ восьми́");
     expect(RussianTime.genitiveMinute(29), "двадцати́ девяти́");
   });
+
+  test('nominativeMinute', () {
+    expect(RussianTime.nominativeMinute(1), "одна́");
+    expect(RussianTime.nominativeMinute(2), "две");
+    expect(RussianTime.nominativeMinute(3), "три");
+    expect(RussianTime.nominativeMinute(4), "четы́ре");
+    expect(RussianTime.nominativeMinute(5), "пять");
+    expect(RussianTime.nominativeMinute(6), "шесть");
+    expect(RussianTime.nominativeMinute(7), "семь");
+    expect(RussianTime.nominativeMinute(8), "во́семь");
+    expect(RussianTime.nominativeMinute(9), "де́вять");
+    expect(RussianTime.nominativeMinute(10), "де́сять");
+    expect(RussianTime.nominativeMinute(11), "оди́ннадцать");
+    expect(RussianTime.nominativeMinute(12), "двена́дцать");
+    expect(RussianTime.nominativeMinute(13), "трина́дцать");
+    expect(RussianTime.nominativeMinute(14), "четы́рнадцать");
+    expect(RussianTime.nominativeMinute(15), "пятна́дцать");
+    expect(RussianTime.nominativeMinute(16), "шестна́дцать");
+    expect(RussianTime.nominativeMinute(17), "семна́дцать");
+    expect(RussianTime.nominativeMinute(18), "восемна́дцать");
+    expect(RussianTime.nominativeMinute(19), "девятна́дцать");
+    expect(RussianTime.nominativeMinute(20), "два́дцать");
+    expect(RussianTime.nominativeMinute(21), "два́дцать одна́");
+    expect(RussianTime.nominativeMinute(22), "два́дцать две");
+    expect(RussianTime.nominativeMinute(23), "два́дцать три");
+    expect(RussianTime.nominativeMinute(24), "два́дцать четы́ре");
+    expect(RussianTime.nominativeMinute(25), "два́дцать пять");
+    expect(RussianTime.nominativeMinute(26), "два́дцать шесть");
+    expect(RussianTime.nominativeMinute(27), "два́дцать семь");
+    expect(RussianTime.nominativeMinute(28), "два́дцать во́семь");
+    expect(RussianTime.nominativeMinute(29), "два́дцать де́вять");
+  });
 }
