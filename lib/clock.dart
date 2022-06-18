@@ -26,9 +26,9 @@ class Clock extends CustomPainter {
     const hourLineLength = 20;
     const hourRadSpacing = 2 * pi / 12;
     for (double rad = 0; rad < 2 * pi; rad = rad + hourRadSpacing) {
-      final offsetOuter = offsetOnCircle(
+      final offsetOuter = _offsetOnCircle(
           radius: r, radians: rad, xOffset: center.dx, yOffset: center.dy);
-      final offsetInner = offsetOnCircle(
+      final offsetInner = _offsetOnCircle(
           radius: r - hourLineLength,
           radians: rad,
           xOffset: center.dx,
@@ -42,7 +42,7 @@ class Clock extends CustomPainter {
     return true;
   }
 
-  offsetOnCircle(
+  _offsetOnCircle(
       {required double radius,
       required double radians,
       required double xOffset,
