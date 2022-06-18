@@ -52,7 +52,8 @@ class Clock extends CustomPainter {
     paintHand.style = PaintingStyle.fill;
     paintHand.strokeWidth = 6;
 
-    final hourRad = time.hour % 12 * 2 * pi / 12;
+    const radPerHour = 2 * pi /12;
+    final hourRad = time.hour % 12 * radPerHour + radPerHour * (time.minute / 60);
     const hourDistanceFromOuter = 80;
     final offsetHourOuter = _offsetOnCircle(
         radius: r - hourDistanceFromOuter, radians: hourRad, center: center);
