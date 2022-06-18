@@ -31,9 +31,12 @@ class TTS {
   }
 
   Future<bool> setLanguage(String language) async {
+    final lang1 = language;
+    final lang2 = language.replaceFirst('-', '_');
+
     final allVoices = await _tts.getVoices();
     for (var voice in allVoices) {
-      if (voice.language == language) {
+      if (voice.language == lang1 || voice.language == lang2) {
         return _tts.setVoice(voice);
       }
     }

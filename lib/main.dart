@@ -49,12 +49,7 @@ class _RussianClockState extends State<RussianClock> {
 
   @override
   void initState() {
-    _tts.haveLanguageRU().then((value) {
-      _tts.setLanguage(TTS.languageRU).then((value) {
-        _canSpeak = value;
-        return true;
-      });
-    });
+    _initState();
     super.initState();
   }
 
@@ -96,6 +91,15 @@ class _RussianClockState extends State<RussianClock> {
         ],
       ),
     );
+  }
+
+  _initState() async {
+    if (await _tts.haveLanguageRU()) {
+      final success = await _tts.setLanguage(TTS.languageRU);
+      if (success) {
+        _canSpeak = true;
+      }
+    }
   }
 
   _speak() {
