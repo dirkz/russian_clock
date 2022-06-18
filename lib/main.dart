@@ -60,9 +60,6 @@ class _RussianClockState extends State<RussianClock> {
 
   @override
   Widget build(BuildContext context) {
-    // top/bottom in some places
-    const margin = 10.0;
-
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -79,7 +76,7 @@ class _RussianClockState extends State<RussianClock> {
           Expanded(
               flex: 4,
               child: Container(
-                  padding: const EdgeInsets.all(margin),
+                  padding: const EdgeInsets.all(_margin),
                   child: LayoutBuilder(
                     builder: (context, constraints) {
                       final dim =
@@ -94,7 +91,7 @@ class _RussianClockState extends State<RussianClock> {
                   ))),
           Expanded(child: Center(child: (_solution ?? "").largeText(context))),
           Container(
-              padding: const EdgeInsets.only(bottom: margin),
+              padding: const EdgeInsets.only(bottom: _margin),
               child: _buttonRow())
         ],
       ),
@@ -107,7 +104,6 @@ class _RussianClockState extends State<RussianClock> {
       _solution = RussianTime.time(_currentTime);
       final textToSpeak = _solution;
       if (_canSpeak && textToSpeak != null) {
-        print("*** speak $textToSpeak");
         _tts.stop();
         _tts.speak(textToSpeak);
       }
@@ -115,6 +111,14 @@ class _RussianClockState extends State<RussianClock> {
   }
 
   _onRepeatSpeechPressed() {
+    final textToSpeak = _solution;
+    if (_canSpeak && textToSpeak != null) {
+      _tts.stop();
+      _tts.speak(textToSpeak);
+    }
+  }
+
+  _onNextPressed() {
     setState(() {
       _solutionState = SolutionState.unsolved;
       _solution = null;
@@ -138,8 +142,16 @@ class _RussianClockState extends State<RussianClock> {
       case SolutionState.solved:
         buttons.add(ElevatedButton(
             onPressed: _onRepeatSpeechPressed, child: const Text("Repeat")));
+        buttons.add(ElevatedButton(
+            onPressed: _onNextPressed, child: const Text("Next")));
         break;
     }
+
+    for (var i = 0; i < buttons.length - 1; i++) {
+      buttons[i] = Container(
+          padding: const EdgeInsets.only(right: _margin), child: buttons[i]);
+    }
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: buttons,
@@ -151,4 +163,7 @@ class _RussianClockState extends State<RussianClock> {
   String? _solution;
   final _tts = TTS();
   bool _canSpeak = false;
+
+  // top/bottom in some places
+  static const _margin = 10.0;
 }
