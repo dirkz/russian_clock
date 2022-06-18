@@ -1,0 +1,11 @@
+framework module tts_plugin {
+  umbrella header "tts_plugin-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module tts_plugin.Swift {
+    header "tts_plugin-Swift.h"
+    requires objc
+}

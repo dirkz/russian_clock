@@ -1,0 +1,30 @@
+{
+  "name": "text_to_speech_macos",
+  "version": "0.1.0",
+  "summary": "A macOS implementation of text_to_speech.",
+  "description": "A new flutter plugin project.",
+  "homepage": "https://github.com/ixsans/text_to_speech_macos",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Ixsans Lab": "ikhsanudinhakim@gmail.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "dependencies": {
+    "FlutterMacOS": [
+
+    ]
+  },
+  "platforms": {
+    "osx": "10.14"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES"
+  },
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}

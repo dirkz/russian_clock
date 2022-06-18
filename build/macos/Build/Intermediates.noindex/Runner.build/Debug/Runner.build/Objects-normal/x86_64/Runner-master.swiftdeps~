@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "9a1a92567da5ba281853eeb8aa848932366c22d4c906cd6a3183548b7eafb970"
+build_start_time: [1655127968, 810647964]
+build_end_time: [1655127974, 737975120]
+inputs:
+  "/Users/dirk/projects/flutter/russian_clock/macos/Flutter/GeneratedPluginRegistrant.swift": [1655127951, 216783046]
+  "/Users/dirk/projects/flutter/russian_clock/macos/Runner/AppDelegate.swift": [1654880026, 0]
+  "/Users/dirk/projects/flutter/russian_clock/macos/Runner/MainFlutterWindow.swift": [1654880026, 0]

@@ -1,0 +1,14 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/dirk/projects/flutter/russian_clock/build/macos/Build/Products/Debug/flutter_tts/flutter_tts.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/dirk/projects/flutter/russian_clock/build/macos/Build/Intermediates.noindex/Pods.build/Debug/flutter_tts.build/unextended-module.modulemap",
+    }]
+  }]
+}

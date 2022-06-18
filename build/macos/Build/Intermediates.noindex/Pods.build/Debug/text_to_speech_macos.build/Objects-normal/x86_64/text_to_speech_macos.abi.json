@@ -1,0 +1,1575 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Cocoa",
+      "printedName": "Cocoa",
+      "declKind": "Import",
+      "moduleName": "text_to_speech_macos"
+    },
+    {
+      "kind": "Import",
+      "name": "FlutterMacOS",
+      "printedName": "FlutterMacOS",
+      "declKind": "Import",
+      "moduleName": "text_to_speech_macos"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "TextToSpeechMacOsPlugin",
+      "printedName": "TextToSpeechMacOsPlugin",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "tts",
+          "printedName": "tts",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Tts",
+              "printedName": "text_to_speech_macos.Tts",
+              "usr": "c:@M@text_to_speech_macos@objc(cs)Tts"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC3ttsAA3TtsCvp",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC3ttsAA3TtsCvp",
+          "moduleName": "text_to_speech_macos",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Tts",
+                  "printedName": "text_to_speech_macos.Tts",
+                  "usr": "c:@M@text_to_speech_macos@objc(cs)Tts"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC3ttsAA3TtsCvg",
+              "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC3ttsAA3TtsCvg",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "register",
+          "printedName": "register(with:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterPluginRegistrar",
+              "printedName": "FlutterMacOS.FlutterPluginRegistrar",
+              "usr": "c:objc(pl)FlutterPluginRegistrar"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@text_to_speech_macos@objc(cs)TextToSpeechMacOsPlugin(cm)registerWithRegistrar:",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC8register4withySo07FlutterJ9Registrar_p_tFZ",
+          "moduleName": "text_to_speech_macos",
+          "static": true,
+          "objc_name": "registerWithRegistrar:",
+          "declAttributes": [
+            "Final",
+            "ObjC",
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "handle",
+          "printedName": "handle(_:result:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "FlutterMethodCall",
+              "printedName": "FlutterMacOS.FlutterMethodCall",
+              "usr": "c:objc(cs)FlutterMethodCall"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Any?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Any?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "c:@M@text_to_speech_macos@objc(cs)TextToSpeechMacOsPlugin(im)handleMethodCall:result:",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "objc_name": "handleMethodCall:result:",
+          "declAttributes": [
+            "ObjC",
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "speak",
+          "printedName": "speak(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC5speakyySSF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC5speakyySSF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "stop",
+          "printedName": "stop()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC4stopSbyF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC4stopSbyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "pause",
+          "printedName": "pause()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC5pauseSbyF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC5pauseSbyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "resume",
+          "printedName": "resume()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC6resumeSbyF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC6resumeSbyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setRate",
+          "printedName": "setRate(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC7setRateyySfF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC7setRateyySfF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setVolume",
+          "printedName": "setVolume(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC9setVolumeyySfF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC9setVolumeyySfF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setPitch",
+          "printedName": "setPitch(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC8setPitchyySfF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC8setPitchyySfF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setLanguage",
+          "printedName": "setLanguage(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC11setLanguageyySSF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC11setLanguageyySSF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setVoice",
+          "printedName": "setVoice(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC8setVoiceyySSF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC8setVoiceyySSF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getLanguages",
+          "printedName": "getLanguages()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC12getLanguagesSaySSGyF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC12getLanguagesSaySSGyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getDefaultLanguage",
+          "printedName": "getDefaultLanguage()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC18getDefaultLanguageSSyF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC18getDefaultLanguageSSyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getVoices",
+          "printedName": "getVoices()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC9getVoicesSaySSGyF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC9getVoicesSaySSGyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getVoiceByLanguage",
+          "printedName": "getVoiceByLanguage(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC18getVoiceByLanguageySaySSGSSF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC18getVoiceByLanguageySaySSGSSF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getDefaultVoice",
+          "printedName": "getDefaultVoice()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos23TextToSpeechMacOsPluginC15getDefaultVoiceSSSgyF",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC15getDefaultVoiceSSSgyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "TextToSpeechMacOsPlugin",
+              "printedName": "text_to_speech_macos.TextToSpeechMacOsPlugin",
+              "usr": "c:@M@text_to_speech_macos@objc(cs)TextToSpeechMacOsPlugin"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@text_to_speech_macos@objc(cs)TextToSpeechMacOsPlugin(im)init",
+          "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginCACycfc",
+          "moduleName": "text_to_speech_macos",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@text_to_speech_macos@objc(cs)TextToSpeechMacOsPlugin",
+      "mangledName": "$s20text_to_speech_macos23TextToSpeechMacOsPluginC",
+      "moduleName": "text_to_speech_macos",
+      "isOpen": true,
+      "declAttributes": [
+        "AccessControl",
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "AVKit",
+      "printedName": "AVKit",
+      "declKind": "Import",
+      "moduleName": "text_to_speech_macos"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Tts",
+      "printedName": "Tts",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "speechSynthesizer",
+          "printedName": "speechSynthesizer",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AVSpeechSynthesizer",
+              "printedName": "AVFAudio.AVSpeechSynthesizer",
+              "usr": "c:objc(cs)AVSpeechSynthesizer"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:20text_to_speech_macos3TtsC0C11SynthesizerSo08AVSpeechF0Cvp",
+          "mangledName": "$s20text_to_speech_macos3TtsC0C11SynthesizerSo08AVSpeechF0Cvp",
+          "moduleName": "text_to_speech_macos",
+          "declAttributes": [
+            "HasInitialValue",
+            "Final",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AVSpeechSynthesizer",
+                  "printedName": "AVFAudio.AVSpeechSynthesizer",
+                  "usr": "c:objc(cs)AVSpeechSynthesizer"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC0C11SynthesizerSo08AVSpeechF0Cvg",
+              "mangledName": "$s20text_to_speech_macos3TtsC0C11SynthesizerSo08AVSpeechF0Cvg",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "pitch",
+          "printedName": "pitch",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:20text_to_speech_macos3TtsC5pitchSfvp",
+          "mangledName": "$s20text_to_speech_macos3TtsC5pitchSfvp",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Float",
+                  "printedName": "Swift.Float",
+                  "usr": "s:Sf"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC5pitchSfvg",
+              "mangledName": "$s20text_to_speech_macos3TtsC5pitchSfvg",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Float",
+                  "printedName": "Swift.Float",
+                  "usr": "s:Sf"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC5pitchSfvs",
+              "mangledName": "$s20text_to_speech_macos3TtsC5pitchSfvs",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC5pitchSfvM",
+              "mangledName": "$s20text_to_speech_macos3TtsC5pitchSfvM",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "volume",
+          "printedName": "volume",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:20text_to_speech_macos3TtsC6volumeSfvp",
+          "mangledName": "$s20text_to_speech_macos3TtsC6volumeSfvp",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Float",
+                  "printedName": "Swift.Float",
+                  "usr": "s:Sf"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC6volumeSfvg",
+              "mangledName": "$s20text_to_speech_macos3TtsC6volumeSfvg",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Float",
+                  "printedName": "Swift.Float",
+                  "usr": "s:Sf"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC6volumeSfvs",
+              "mangledName": "$s20text_to_speech_macos3TtsC6volumeSfvs",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC6volumeSfvM",
+              "mangledName": "$s20text_to_speech_macos3TtsC6volumeSfvM",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "rate",
+          "printedName": "rate",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:20text_to_speech_macos3TtsC4rateSfvp",
+          "mangledName": "$s20text_to_speech_macos3TtsC4rateSfvp",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Float",
+                  "printedName": "Swift.Float",
+                  "usr": "s:Sf"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC4rateSfvg",
+              "mangledName": "$s20text_to_speech_macos3TtsC4rateSfvg",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Float",
+                  "printedName": "Swift.Float",
+                  "usr": "s:Sf"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC4rateSfvs",
+              "mangledName": "$s20text_to_speech_macos3TtsC4rateSfvs",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC4rateSfvM",
+              "mangledName": "$s20text_to_speech_macos3TtsC4rateSfvM",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "language",
+          "printedName": "language",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:20text_to_speech_macos3TtsC8languageSSSgvp",
+          "mangledName": "$s20text_to_speech_macos3TtsC8languageSSSgvp",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC8languageSSSgvg",
+              "mangledName": "$s20text_to_speech_macos3TtsC8languageSSSgvg",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC8languageSSSgvs",
+              "mangledName": "$s20text_to_speech_macos3TtsC8languageSSSgvs",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC8languageSSSgvM",
+              "mangledName": "$s20text_to_speech_macos3TtsC8languageSSSgvM",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "voice",
+          "printedName": "voice",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "AVFAudio.AVSpeechSynthesisVoice?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AVSpeechSynthesisVoice",
+                  "printedName": "AVFAudio.AVSpeechSynthesisVoice",
+                  "usr": "c:objc(cs)AVSpeechSynthesisVoice"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:20text_to_speech_macos3TtsC5voiceSo22AVSpeechSynthesisVoiceCSgvp",
+          "mangledName": "$s20text_to_speech_macos3TtsC5voiceSo22AVSpeechSynthesisVoiceCSgvp",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "AVFAudio.AVSpeechSynthesisVoice?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AVSpeechSynthesisVoice",
+                      "printedName": "AVFAudio.AVSpeechSynthesisVoice",
+                      "usr": "c:objc(cs)AVSpeechSynthesisVoice"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC5voiceSo22AVSpeechSynthesisVoiceCSgvg",
+              "mangledName": "$s20text_to_speech_macos3TtsC5voiceSo22AVSpeechSynthesisVoiceCSgvg",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "AVFAudio.AVSpeechSynthesisVoice?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AVSpeechSynthesisVoice",
+                      "printedName": "AVFAudio.AVSpeechSynthesisVoice",
+                      "usr": "c:objc(cs)AVSpeechSynthesisVoice"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC5voiceSo22AVSpeechSynthesisVoiceCSgvs",
+              "mangledName": "$s20text_to_speech_macos3TtsC5voiceSo22AVSpeechSynthesisVoiceCSgvs",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:20text_to_speech_macos3TtsC5voiceSo22AVSpeechSynthesisVoiceCSgvM",
+              "mangledName": "$s20text_to_speech_macos3TtsC5voiceSo22AVSpeechSynthesisVoiceCSgvM",
+              "moduleName": "text_to_speech_macos",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "speak",
+          "printedName": "speak(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC5speakyySSF",
+          "mangledName": "$s20text_to_speech_macos3TtsC5speakyySSF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "stop",
+          "printedName": "stop()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC4stopSbyF",
+          "mangledName": "$s20text_to_speech_macos3TtsC4stopSbyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "pause",
+          "printedName": "pause()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC5pauseSbyF",
+          "mangledName": "$s20text_to_speech_macos3TtsC5pauseSbyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "resume",
+          "printedName": "resume()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC6resumeSbyF",
+          "mangledName": "$s20text_to_speech_macos3TtsC6resumeSbyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setRate",
+          "printedName": "setRate(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC7setRateyySfF",
+          "mangledName": "$s20text_to_speech_macos3TtsC7setRateyySfF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setVolume",
+          "printedName": "setVolume(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC9setVolumeyySfF",
+          "mangledName": "$s20text_to_speech_macos3TtsC9setVolumeyySfF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setPitch",
+          "printedName": "setPitch(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Float",
+              "printedName": "Swift.Float",
+              "usr": "s:Sf"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC8setPitchyySfF",
+          "mangledName": "$s20text_to_speech_macos3TtsC8setPitchyySfF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setLanguage",
+          "printedName": "setLanguage(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC11setLanguageyySSF",
+          "mangledName": "$s20text_to_speech_macos3TtsC11setLanguageyySSF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "setVoice",
+          "printedName": "setVoice(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC8setVoiceyySSF",
+          "mangledName": "$s20text_to_speech_macos3TtsC8setVoiceyySSF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getLanguages",
+          "printedName": "getLanguages()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC12getLanguagesSaySSGyF",
+          "mangledName": "$s20text_to_speech_macos3TtsC12getLanguagesSaySSGyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getDefaultLanguage",
+          "printedName": "getDefaultLanguage()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC18getDefaultLanguageSSyF",
+          "mangledName": "$s20text_to_speech_macos3TtsC18getDefaultLanguageSSyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getVoices",
+          "printedName": "getVoices()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC9getVoicesSaySSGyF",
+          "mangledName": "$s20text_to_speech_macos3TtsC9getVoicesSaySSGyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getVoiceByLanguage",
+          "printedName": "getVoiceByLanguage(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC18getVoiceByLanguageySaySSGSSF",
+          "mangledName": "$s20text_to_speech_macos3TtsC18getVoiceByLanguageySaySSGSSF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "getDefaultVoice",
+          "printedName": "getDefaultVoice()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:20text_to_speech_macos3TtsC15getDefaultVoiceSSSgyF",
+          "mangledName": "$s20text_to_speech_macos3TtsC15getDefaultVoiceSSSgyF",
+          "moduleName": "text_to_speech_macos",
+          "isOpen": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Tts",
+              "printedName": "text_to_speech_macos.Tts",
+              "usr": "c:@M@text_to_speech_macos@objc(cs)Tts"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "c:@M@text_to_speech_macos@objc(cs)Tts(im)init",
+          "mangledName": "$s20text_to_speech_macos3TtsCACycfc",
+          "moduleName": "text_to_speech_macos",
+          "overriding": true,
+          "implicit": true,
+          "objc_name": "init",
+          "declAttributes": [
+            "Dynamic",
+            "ObjC",
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "c:@M@text_to_speech_macos@objc(cs)Tts",
+      "mangledName": "$s20text_to_speech_macos3TtsC",
+      "moduleName": "text_to_speech_macos",
+      "isOpen": true,
+      "declAttributes": [
+        "ObjC"
+      ],
+      "superclassUsr": "c:objc(cs)NSObject",
+      "inheritsConvenienceInitializers": true,
+      "superclassNames": [
+        "ObjectiveC.NSObject"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObservingPublishing",
+          "printedName": "_KeyValueCodingAndObservingPublishing",
+          "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+          "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_KeyValueCodingAndObserving",
+          "printedName": "_KeyValueCodingAndObserving",
+          "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+          "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

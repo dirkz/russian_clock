@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "30773877af673ad64ab80f2e2d11ee9a24eeee8f268b0aacf6b33343a52cc033"
+build_start_time: [1655539851, 56025981]
+build_end_time: [1655539859, 104333877]
+inputs:
+  "/Users/dirk/flutter/.pub-cache/hosted/pub.dartlang.org/text_to_speech_macos-0.1.1/macos/Classes/TextToSpeechMacOsPlugin.swift": [1655539498, 669042825]
+  "/Users/dirk/flutter/.pub-cache/hosted/pub.dartlang.org/text_to_speech_macos-0.1.1/macos/Classes/Tts.swift": [1655539498, 670007228]
