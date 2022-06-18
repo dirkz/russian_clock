@@ -3,7 +3,10 @@ class RussianTime {
     if (11 <= n && n <= 19) {
         return "мину́т";
     }
-    switch (n % 5) {
+
+    final tester = n % 10;
+    
+    switch (tester % 5) {
       case 1:
         return "мину́та";
       case 2:
