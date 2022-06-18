@@ -3,15 +3,14 @@ import 'package:tts_plugin/tts_plugin.dart';
 class TTS {
   static const languageRU = "ru-RU";
 
-  Future<bool> haveLanguageRU() {
-    return Future(() async {
-      final languages = await this.languages();
-      if (languages.contains(languageRU)) {
-        return true;
-      } else {
-        return false;
-      }
-    });
+  Future<bool> haveLanguageRU() async {
+    const lang1 = languageRU;
+    final lang2 = languageRU.replaceFirst('-', '_');
+    final languages = await this.languages();
+    if (languages.contains(lang1) || languages.contains(lang2)) {
+      return true;
+    }
+    return false;
   }
 
   Future<List<String>> languages() async {
