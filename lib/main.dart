@@ -60,7 +60,7 @@ class _RussianClockState extends State<RussianClock> {
           return _onSolvePressed;
       }
     }
-    
+
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
@@ -93,7 +93,10 @@ class _RussianClockState extends State<RussianClock> {
                         },
                       ))),
               Expanded(
-                  child: Center(child: (_solution ?? "").largeText(context))),
+                  child: Container(
+                      padding: const EdgeInsets.all(_margin),
+                      child:
+                          Center(child: (_solution ?? "").largeText(context)))),
               Container(
                   padding: const EdgeInsets.only(bottom: _margin),
                   child: _buttonRow())
