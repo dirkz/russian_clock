@@ -13,9 +13,9 @@ class _VoicesState extends State<Voices> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Title"),
-      ),
-      body: Text(""));
+        appBar: AppBar(
+          title: Text("Title"),
+        ),
+        body: Text(""));
   }
 }
