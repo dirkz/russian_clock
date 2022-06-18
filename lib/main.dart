@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Russian Clock',
       theme: ThemeData(
         primarySwatch: Colors.grey,
-        textTheme: GoogleFonts.ibmPlexSerifTextTheme()
+        textTheme: GoogleFonts.vollkornTextTheme()
       ),
       home: RussianClock(
         title: 'Russian Clock',
