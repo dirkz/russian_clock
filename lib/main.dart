@@ -26,13 +26,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: RussianClock(title: 'Russian Clock', random: Random.secure(),),
+      home: const RussianClock(title: 'Russian Clock'),
     );
   }
 }
 
 class RussianClock extends StatefulWidget {
-  const RussianClock({Key? key, required this.title, required this.random}) : super(key: key);
+  const RussianClock({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -44,7 +44,6 @@ class RussianClock extends StatefulWidget {
   // always marked "final".
 
   final String title;
-  final Random random;
 
   @override
   State<RussianClock> createState() => _RussianClockState();
@@ -55,17 +54,32 @@ class HourMinute {
   final int minute;
 
   HourMinute({required this.hour, required this.minute});
-  random({required Random random}) {
+
+  factory HourMinute.random({required Random random}) {
     final m = random.nextInt(59) + 1;
     final h = random.nextInt(11) + 1;
     return HourMinute(hour: h, minute: m);
+  }
+
+  @override
+  String toString() {
+    return "$hour:$minute";
   }
 }
 
 enum SolutionState { unsolved, solved }
 
 class _RussianClockState extends State<RussianClock> {
+  final Random _random;
+
   var _solutionState = SolutionState.unsolved;
+  HourMinute _currentTime;
+
+  _RussianClockState()
+      : _random = Random.secure(),
+        _currentTime = HourMinute(hour: 0, minute: 0) {
+    _currentTime = HourMinute.random(random: _random);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,8 +95,8 @@ class _RussianClockState extends State<RussianClock> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Container(
-        child: Column(children: [_buttonRow()]),
+      body: Column(
+        children: [Text(_currentTime.toString()), _buttonRow()],
       ),
     );
   }
