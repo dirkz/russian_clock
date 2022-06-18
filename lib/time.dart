@@ -9,7 +9,7 @@ class HourMinute {
   factory HourMinute.random({required Random random}) {
     final m = random.nextInt(59) + 1;
     final h = random.nextInt(11) + 1;
-    return HourMinute(hour: 0, minute: 1);
+    return HourMinute(hour: h, minute: m);
   }
 
   @override
