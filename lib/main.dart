@@ -95,8 +95,15 @@ class _RussianClockState extends State<RussianClock> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Column(
-        children: [Text(_currentTime.toString()), _buttonRow()],
+      body: Stack(
+        children: [
+          Center(child: Text(_currentTime.toString())),
+          Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: _buttonRow()))
+        ],
       ),
     );
   }
@@ -118,6 +125,7 @@ class _RussianClockState extends State<RussianClock> {
         break;
     }
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: buttons,
     );
   }
