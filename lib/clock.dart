@@ -45,9 +45,27 @@ class Clock extends CustomPainter {
     paintCircle.strokeWidth = 1;
     canvas.drawCircle(center, centerRadius, paintCircle);
 
+    final paintHand = Paint();
+    paintHand.style = PaintingStyle.fill;
+    paintHand.strokeWidth = 4;
+
     final hourRad = time.hour % 12 * 2 * pi / 12;
-    final offsetOuter =
-        _offsetOnCircle(radius: r - 20, radians: hourRad, offset: center);
+    const hourDistanceFromOuter = 60;
+    final offsetHourOuter = _offsetOnCircle(
+        radius: r - hourDistanceFromOuter, radians: hourRad, offset: center);
+    final offsetHourInner =
+        _offsetOnCircle(radius: centerRadius, radians: hourRad, offset: center);
+    canvas.drawLine(offsetHourOuter, offsetHourInner, paintHand);
+
+    final minuteRad = time.minute * 2 * pi / 60;
+    const minuteDistanceFromOuter = 30;
+    final offsetMinuteOuter = _offsetOnCircle(
+        radius: r - minuteDistanceFromOuter,
+        radians: minuteRad,
+        offset: center);
+    final offsetMinuteInner = _offsetOnCircle(
+        radius: centerRadius, radians: minuteRad, offset: center);
+    canvas.drawLine(offsetMinuteOuter, offsetMinuteInner, paintHand);
   }
 
   @override
