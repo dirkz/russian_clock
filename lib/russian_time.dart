@@ -17,4 +17,13 @@ class RussianTime {
         return "мину́т";
     }
   }
+
+  static String genitiveMinuteAfterNumber(int n) {
+    final man = minuteAfterNumber(n);
+    if (man == "мину́та") {
+      return "мину́ты";
+    } else {
+      return man;
+    }
+  }
 }
