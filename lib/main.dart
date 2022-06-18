@@ -40,7 +40,7 @@ class RussianClock extends StatefulWidget {
 enum SolutionState { unsolved, solved }
 
 class _RussianClockState extends State<RussianClock> {
-  _RussianClockState() : _currentTime = HourMinute(hour: 0, minute: 0);
+  _RussianClockState() : _currentTime = HourMinute.random();
 
   var _solutionState = SolutionState.unsolved;
   HourMinute _currentTime;
