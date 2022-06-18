@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:russian_clock/russian_time.dart';
 
 void main() {
-  test('_minuteAfterNumber', () {
+  test('minuteAfterNumber', () {
     expect(RussianTime.minuteAfterNumber(0), "мину́т");
     expect(RussianTime.minuteAfterNumber(1), "мину́та");
     expect(RussianTime.minuteAfterNumber(2), "мину́ты");
@@ -35,5 +35,39 @@ void main() {
     expect(RussianTime.minuteAfterNumber(28), "мину́т");
     expect(RussianTime.minuteAfterNumber(29), "мину́т");
     expect(RussianTime.minuteAfterNumber(30), "мину́т");
+  });
+
+  test('genitiveMinuteAfterNumber', () {
+    expect(RussianTime.genitiveMinuteAfterNumber(0), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(1), "мину́ты");
+    expect(RussianTime.genitiveMinuteAfterNumber(2), "мину́ты");
+    expect(RussianTime.genitiveMinuteAfterNumber(3), "мину́ты");
+    expect(RussianTime.genitiveMinuteAfterNumber(4), "мину́ты");
+    expect(RussianTime.genitiveMinuteAfterNumber(5), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(6), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(7), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(8), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(9), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(10), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(11), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(12), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(13), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(14), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(15), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(16), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(17), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(18), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(19), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(20), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(21), "мину́ты");
+    expect(RussianTime.genitiveMinuteAfterNumber(22), "мину́ты");
+    expect(RussianTime.genitiveMinuteAfterNumber(23), "мину́ты");
+    expect(RussianTime.genitiveMinuteAfterNumber(24), "мину́ты");
+    expect(RussianTime.genitiveMinuteAfterNumber(25), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(26), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(27), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(28), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(29), "мину́т");
+    expect(RussianTime.genitiveMinuteAfterNumber(30), "мину́т");
   });
 }
