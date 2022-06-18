@@ -26,4 +26,22 @@ class RussianTime {
       return man;
     }
   }
+
+  static String hourAfterNumber(int n) {
+    if (11 <= n && n <= 19) {
+        return "часо́в";
+    }
+    final tester = n % 10;
+    
+    switch (tester % 10) { // TODO: Check 0
+      case 1:
+        return "час";
+      case 2:
+      case 3:
+      case 4:
+        return "часа́";
+      default:
+        return "часо́в";
+    }
+  }
 }
