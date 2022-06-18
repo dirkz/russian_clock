@@ -100,4 +100,20 @@ void main() {
     expect(RussianTime.genitiveOrdinalHour(11), "оди́ннадцатого");
     expect(RussianTime.genitiveOrdinalHour(12), "двена́дцатого");
   });
+
+  test('nominativeHour', () {
+    expect(RussianTime.nominativeHour(0), "двена́дцать");
+    expect(RussianTime.nominativeHour(1), "час");
+    expect(RussianTime.nominativeHour(2), "два");
+    expect(RussianTime.nominativeHour(3), "три");
+    expect(RussianTime.nominativeHour(4), "четы́ре");
+    expect(RussianTime.nominativeHour(5), "пять");
+    expect(RussianTime.nominativeHour(6), "шесть");
+    expect(RussianTime.nominativeHour(7), "семь");
+    expect(RussianTime.nominativeHour(8), "во́семь");
+    expect(RussianTime.nominativeHour(9), "де́вять");
+    expect(RussianTime.nominativeHour(10), "де́сять");
+    expect(RussianTime.nominativeHour(11), "оди́ннадцать");
+    expect(RussianTime.nominativeHour(12), "двена́дцать");
+  });
 }

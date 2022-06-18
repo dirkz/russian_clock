@@ -79,4 +79,37 @@ class RussianTime {
         throw ArgumentError.value(n, "n");
     }
   }
+
+  static String nominativeHour(int n) {
+    switch (n) {
+      case 0:
+        return "двена́дцать";
+      case 1:
+        return "час";
+      case 2:
+        return "два";
+      case 3:
+        return "три";
+      case 4:
+        return "четы́ре";
+      case 5:
+        return "пять";
+      case 6:
+        return "шесть";
+      case 7:
+        return "семь";
+      case 8:
+        return "во́семь";
+      case 9:
+        return "де́вять";
+      case 10:
+        return "де́сять";
+      case 11:
+        return "оди́ннадцать";
+      case 12:
+        return "двена́дцать";
+      default:
+        throw ArgumentError.value(n, "n");
+    }
+  }
 }
