@@ -181,63 +181,63 @@ class RussianTime {
   static String nominativeMinute(int n) {
     switch (n) {
       case 1:
-        return "";
+        return "одна́";
       case 2:
-        return "";
+        return "две";
       case 3:
-        return "";
+        return "три";
       case 4:
-        return "";
+        return "четы́ре";
       case 5:
-        return "";
+        return "пять";
       case 6:
-        return "";
+        return "шесть";
       case 7:
-        return "";
+        return "семь";
       case 8:
-        return "";
+        return "во́семь";
       case 9:
-        return "";
+        return "де́вять";
       case 10:
-        return "";
+        return "де́сять";
       case 11:
-        return "";
+        return "оди́ннадцать";
       case 12:
-        return "";
+        return "двена́дцать";
       case 13:
-        return "";
+        return "трина́дцать";
       case 14:
-        return "";
+        return "четы́рнадцать";
       case 15:
-        return "";
+        return "пятна́дцать";
       case 16:
-        return "";
+        return "шестна́дцать";
       case 17:
-        return "";
+        return "семна́дцать";
       case 18:
-        return "";
+        return "восемна́дцать";
       case 19:
-        return "";
+        return "девятна́дцать";
       case 20:
-        return "";
+        return "два́дцать";
       case 21:
-        return "";
+        return "два́дцать одна́";
       case 22:
-        return "";
+        return "два́дцать две";
       case 23:
-        return "";
+        return "два́дцать три";
       case 24:
-        return "";
+        return "два́дцать четы́ре";
       case 25:
-        return "";
+        return "два́дцать пять";
       case 26:
-        return "";
+        return "два́дцать шесть";
       case 27:
-        return "";
+        return "два́дцать семь";
       case 28:
-        return "";
+        return "два́дцать во́семь";
       case 29:
-        return "";
+        return "два́дцать де́вять";
       default:
         throw ArgumentError.value(n, "n");
     }
