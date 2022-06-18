@@ -70,4 +70,18 @@ void main() {
     expect(RussianTime.genitiveMinuteAfterNumber(29), "мину́т");
     expect(RussianTime.genitiveMinuteAfterNumber(30), "мину́т");
   });
+
+  test('hourAfterNumber', () {
+    expect(RussianTime.hourAfterNumber(2), "часа́");
+    expect(RussianTime.hourAfterNumber(3), "часа́");
+    expect(RussianTime.hourAfterNumber(4), "часа́");
+    expect(RussianTime.hourAfterNumber(5), "часо́в");
+    expect(RussianTime.hourAfterNumber(6), "часо́в");
+    expect(RussianTime.hourAfterNumber(7), "часо́в");
+    expect(RussianTime.hourAfterNumber(8), "часо́в");
+    expect(RussianTime.hourAfterNumber(9), "часо́в");
+    expect(RussianTime.hourAfterNumber(10), "часо́в");
+    expect(RussianTime.hourAfterNumber(11), "часо́в");
+    expect(RussianTime.hourAfterNumber(12), "часо́в");
+  });
 }
