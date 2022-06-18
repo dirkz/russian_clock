@@ -46,7 +46,7 @@ class _RussianClockState extends State<RussianClock> {
 
   var _solutionState = SolutionState.unsolved;
   HourMinute _currentTime;
-  String? _solution = null;
+  String? _solution;
 
   @override
   Widget build(BuildContext context) {
@@ -74,12 +74,18 @@ class _RussianClockState extends State<RussianClock> {
 
   _onSolvePressed() {
     setState(() {
-      _solution = RussianTime.time(_currentTime);
       _solutionState = SolutionState.solved;
+      _solution = RussianTime.time(_currentTime);
     });
   }
 
-  _onRepeatSpeechPressed() {}
+  _onRepeatSpeechPressed() {
+    setState(() {
+      _solutionState = SolutionState.unsolved;
+      _solution = null;
+      _currentTime = HourMinute.random(random: widget.random);
+    });
+  }
 
   _buttonRow() {
     var buttons = <Widget>[];
