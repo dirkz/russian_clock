@@ -44,4 +44,13 @@ class RussianTime {
         return "часо́в";
     }
   }
+
+  static String genitiveOrdinalHour(int n) {
+    switch (n) {
+      case 1:
+        return "пе́рвого";
+      default:
+        throw ArgumentError.value(n, "n");
+    }
+  }
 }
