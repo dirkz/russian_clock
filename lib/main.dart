@@ -56,7 +56,7 @@ class _RussianClockState extends State<RussianClock> {
         children: [
           Expanded(
               child: CustomPaint(
-            foregroundPainter: Clock(),
+            foregroundPainter: Clock(time: _currentTime),
             child: Text(_currentTime.toString()),
           )),
           Container(

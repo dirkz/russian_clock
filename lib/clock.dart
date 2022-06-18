@@ -1,8 +1,14 @@
-import 'package:flutter/material.dart';
-
 import 'dart:math';
 
+import 'package:flutter/material.dart';
+
+import 'time.dart';
+
 class Clock extends CustomPainter {
+  final HourMinute time;
+
+  Clock({required this.time});
+  
   @override
   void paint(Canvas canvas, Size size) {
     final r = min(size.height, size.width);
