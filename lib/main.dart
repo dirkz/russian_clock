@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Russian Clock',
-      theme: ThemeData(
-          primarySwatch: Colors.grey),
+      theme: ThemeData(primarySwatch: Colors.grey),
       home: RussianClock(
         title: 'Russian Clock',
         random: Random.secure(),
@@ -101,13 +100,13 @@ class _RussianClockState extends State<RussianClock> {
   }
 
   _speak() {
-      var textToSpeak = _solution;
-      if (_canSpeak && textToSpeak != null) {
-        RegExp re = RegExp(r'\u0301');
-        textToSpeak = textToSpeak.replaceAll(re, '');
-        _tts.stop();
-        _tts.speak(textToSpeak);
-      }
+    var textToSpeak = _solution;
+    if (_canSpeak && textToSpeak != null) {
+      RegExp re = RegExp(r'\u0301');
+      textToSpeak = textToSpeak.replaceAll(re, '');
+      _tts.stop();
+      _tts.speak(textToSpeak);
+    }
   }
 
   _onSolvePressed() {
@@ -119,7 +118,9 @@ class _RussianClockState extends State<RussianClock> {
   }
 
   _onRepeatSpeechPressed() {
-    _speak();
+    if (_solutionState == SolutionState.solved) {
+      _speak();
+    }
   }
 
   _onNextPressed() {
