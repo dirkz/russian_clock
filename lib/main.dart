@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RussianClock(title: 'Russian Clock', random: Random.secure(),),
+      home: RussianClock(
+        title: 'Russian Clock',
+        random: Random.secure(),
+      ),
     );
   }
 }
@@ -56,10 +59,7 @@ class _RussianClockState extends State<RussianClock> {
   var _solutionState = SolutionState.unsolved;
   HourMinute _currentTime;
 
-  _RussianClockState()
-      : _currentTime = HourMinute(hour: 0, minute: 0) {
-    _currentTime = HourMinute.random(random: widget.random);
-  }
+  _RussianClockState() : _currentTime = HourMinute(hour: 0, minute: 0);
 
   @override
   Widget build(BuildContext context) {
