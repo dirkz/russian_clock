@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 
 import 'string_extension.dart';
-
-const _ruLang = "ru-RU";
+import 'tts.dart';
 
 class Voices extends StatefulWidget {
   const Voices({super.key});
@@ -17,15 +15,7 @@ class _VoicesState extends State<Voices> {
 
   @override
   void initState() {
-    _haveRu = Future(() async {
-      final languages = await _flutterTts.getLanguages;
-      if (languages.contains(_ruLang)) {
-        _flutterTts.setLanguage(_ruLang);
-        return true;
-      } else {
-        return false;
-      }
-    });
+    _haveRu = _tts.haveRu();
     super.initState();
   }
 
@@ -47,7 +37,8 @@ class _VoicesState extends State<Voices> {
                 } else {
                   if (snapshot.data == true) {
                     return Center(
-                        child: 'Have Russian as voice language'.largeText(context));
+                        child: 'Have Russian as voice language'
+                            .largeText(context));
                   } else {
                     return Center(
                         child: 'No Russian voice language'.largeText(context));
@@ -58,7 +49,8 @@ class _VoicesState extends State<Voices> {
         ));
   }
 
-  final FlutterTts _flutterTts = FlutterTts();
+  final _tts = TTS();
+
   Future<bool> _haveRu = Future(() {
     return false;
   });
