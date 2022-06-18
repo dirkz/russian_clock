@@ -11,6 +11,7 @@ class Clock extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    print("*** paint ${size}");
     canvas.translate(size.width/2, size.height/2);
     canvas.scale(1, -1);
 
