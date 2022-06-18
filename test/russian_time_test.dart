@@ -84,4 +84,8 @@ void main() {
     expect(RussianTime.hourAfterNumber(11), "часо́в");
     expect(RussianTime.hourAfterNumber(12), "часо́в");
   });
+
+  test('genitiveOrdinalHour', () {
+    expect(RussianTime.genitiveOrdinalHour(5), "пя́того");
+  });
 }
