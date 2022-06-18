@@ -15,7 +15,6 @@ class _VoicesState extends State<Voices> {
 
   @override
   void initState() {
-    _flutterTts.setLanguage("");
     _haveRu = Future(() async {
       final languages = await _flutterTts.getLanguages;
       if (languages.contains(_ruLang)) {
