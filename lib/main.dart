@@ -29,10 +29,9 @@ class MyApp extends StatelessWidget {
 
 class RussianClock extends StatefulWidget {
   final Random random;
+  final String title;
 
   const RussianClock({super.key, required this.title, required this.random});
-
-  final String title;
 
   @override
   State<RussianClock> createState() => _RussianClockState();
