@@ -67,14 +67,11 @@ class _RussianClockState extends State<RussianClock> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Stack(
+      body: Column(
         children: [
-          Center(child: Text(_currentTime.toString())),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                padding: const EdgeInsets.only(bottom: 10),
-                child: _buttonRow()))
+          Expanded(child: Text(_currentTime.toString())),
+          Container(
+              padding: const EdgeInsets.only(bottom: 10), child: _buttonRow())
         ],
       ),
     );
