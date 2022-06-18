@@ -46,11 +46,8 @@ class Clock extends CustomPainter {
     canvas.drawCircle(center, centerRadius, paintCircle);
 
     final hourRad = time.hour % 12 * 2 * pi / 12;
-    final offsetOuter = _offsetOnCircle(
-        radius: r - 20,
-        radians: hourRad,
-        xOffset: center.dx,
-        yOffset: center.dy);
+    final offsetOuter =
+        _offsetOnCircle(radius: r - 20, radians: hourRad, offset: center);
   }
 
   @override
@@ -66,23 +63,20 @@ class Clock extends CustomPainter {
       required double radius,
       required double radSpacing}) {
     for (double rad = 0; rad < 2 * pi; rad = rad + radSpacing) {
-      final offsetOuter = _offsetOnCircle(
-          radius: radius, radians: rad, xOffset: center.dx, yOffset: center.dy);
+      final offsetOuter =
+          _offsetOnCircle(radius: radius, radians: rad, offset: center);
       final offsetInner = _offsetOnCircle(
-          radius: radius - lineLingth,
-          radians: rad,
-          xOffset: center.dx,
-          yOffset: center.dy);
+          radius: radius - lineLingth, radians: rad, offset: center);
       canvas.drawLine(offsetOuter, offsetInner, paint);
     }
   }
 
-  _offsetOnCircle(
-      {required double radius,
-      required double radians,
-      required double xOffset,
-      required double yOffset}) {
+  _offsetOnCircle({
+    required double radius,
+    required double radians,
+    required Offset offset,
+  }) {
     return Offset(
-        radius * cos(radians) + xOffset, radius * sin(radians) + yOffset);
+        radius * cos(radians) + offset.dx, radius * sin(radians) + offset.dy);
   }
 }
