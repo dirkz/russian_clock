@@ -112,4 +112,69 @@ class RussianTime {
         throw ArgumentError.value(n, "n");
     }
   }
+
+  static String genitiveMinute(int n) {
+    switch (n) {
+      case 1:
+        return "одно́й";
+      case 2:
+        return "двух";
+      case 3:
+        return "трёх";
+      case 4:
+        return "четырёх";
+      case 5:
+        return "пяти́";
+      case 6:
+        return "шести́";
+      case 7:
+        return "семи́";
+      case 8:
+        return "восьми́";
+      case 9:
+        return "девяти́";
+      case 10:
+        return "десяти́";
+      case 11:
+        return "оди́ннадцати";
+      case 12:
+        return "двена́дцати";
+      case 13:
+        return "трина́дцати";
+      case 14:
+        return "четы́рнадцати";
+      case 15:
+        return "пятна́дцати";
+      case 16:
+        return "шестна́дцати";
+      case 17:
+        return "семна́дцати";
+      case 18:
+        return "восемна́дцати";
+      case 19:
+        return "девятна́дцати";
+      case 20:
+        return "двадцати́";
+      case 21:
+        return "двадцати́ одно́й";
+      case 22:
+        return "двадцати́ двух";
+      case 23:
+        return "двадцати́ трёх";
+      case 24:
+        return "двадцати́ четырёх";
+      case 25:
+        return "двадцати́ пяти́";
+      case 26:
+        return "двадцати́ шести́";
+      case 27:
+        return "двадцати́ семи́";
+      case 28:
+        return "двадцати́ восьми́";
+      case 29:
+        return "двадцати́ девяти́";
+      default:
+        throw ArgumentError.value(n, "n");
+    }
+  }
 }
