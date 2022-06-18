@@ -5,7 +5,7 @@ class TTS {
 
   Future<bool> haveLanguageRU() {
     return Future(() async {
-      final languages = await _tts.getLanguages();
+      final languages = await this.languages();
       if (languages.contains(languageRU)) {
         return true;
       } else {
