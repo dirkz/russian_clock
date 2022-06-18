@@ -1,8 +1,6 @@
 import 'dart:math';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'clock.dart';
@@ -13,11 +11,6 @@ import 'string_extension.dart';
 import 'tts.dart';
 
 void main() {
-  LicenseRegistry.addLicense(() async* {
-    final license = await rootBundle.loadString('assets/google_fonts/OFL.txt');
-    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
-  });
-  
   runApp(const MyApp());
 }
 
@@ -27,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GoogleFonts.config.allowRuntimeFetching = false;
-
+    
     return MaterialApp(
       title: 'Russian Clock',
       theme: ThemeData(
