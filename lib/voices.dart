@@ -33,7 +33,27 @@ class _VoicesState extends State<Voices> {
         appBar: AppBar(
           title: const Text("Voices"),
         ),
-        body: const Text("Voices here"));
+        body: FutureBuilder<bool>(
+          future: _haveRu, // async work
+          builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+            switch (snapshot.connectionState) {
+              case ConnectionState.waiting:
+                return const Text('Determining available languages');
+              default:
+                if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
+                } else {
+                  if (snapshot.data == true) {
+                    return const Center(
+                        child: Text('Have Russian as voice language'));
+                  } else {
+                    return const Center(
+                        child: Text('No Russian voice language'));
+                  }
+                }
+            }
+          },
+        ));
   }
 
   final FlutterTts _flutterTts = FlutterTts();
