@@ -1,5 +1,5 @@
 class RussianTime {
-  String _minuteAfterNumber(int n) {
+  static String minuteAfterNumber(int n) {
     if (11 <= n || n <= 19) {
         return "мину́т";
     }
