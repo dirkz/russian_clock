@@ -53,41 +53,44 @@ class _RussianClockState extends State<RussianClock> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.list),
-            onPressed: _pushVoices,
-            tooltip: 'Voices',
+        appBar: AppBar(
+          title: Text(widget.title),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.list),
+              onPressed: _pushVoices,
+              tooltip: 'Voices',
+            ),
+          ],
+        ),
+        body: InkWell(
+          onTap: _onRepeatSpeechPressed,
+          child: Column(
+            children: [
+              Expanded(
+                  flex: 4,
+                  child: Container(
+                      padding: const EdgeInsets.all(_margin),
+                      child: LayoutBuilder(
+                        builder: (context, constraints) {
+                          final dim =
+                              min(constraints.maxHeight, constraints.maxWidth);
+                          return SizedBox(
+                              width: dim,
+                              height: dim,
+                              child: CustomPaint(
+                                foregroundPainter: Clock(time: _currentTime),
+                              ));
+                        },
+                      ))),
+              Expanded(
+                  child: Center(child: (_solution ?? "").largeText(context))),
+              Container(
+                  padding: const EdgeInsets.only(bottom: _margin),
+                  child: _buttonRow())
+            ],
           ),
-        ],
-      ),
-      body: Column(
-        children: [
-          Expanded(
-              flex: 4,
-              child: Container(
-                  padding: const EdgeInsets.all(_margin),
-                  child: LayoutBuilder(
-                    builder: (context, constraints) {
-                      final dim =
-                          min(constraints.maxHeight, constraints.maxWidth);
-                      return SizedBox(
-                          width: dim,
-                          height: dim,
-                          child: CustomPaint(
-                            foregroundPainter: Clock(time: _currentTime),
-                          ));
-                    },
-                  ))),
-          Expanded(child: Center(child: (_solution ?? "").largeText(context))),
-          Container(
-              padding: const EdgeInsets.only(bottom: _margin),
-              child: _buttonRow())
-        ],
-      ),
-    );
+        ));
   }
 
   _initState() async {
@@ -145,8 +148,6 @@ class _RussianClockState extends State<RussianClock> {
             onPressed: _onSolvePressed, child: const Text("Solve")));
         break;
       case SolutionState.solved:
-        buttons.add(ElevatedButton(
-            onPressed: _onRepeatSpeechPressed, child: const Text("Repeat")));
         buttons.add(ElevatedButton(
             onPressed: _onNextPressed, child: const Text("Next")));
         break;
