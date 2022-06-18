@@ -69,7 +69,7 @@ class _RussianClockState extends State<RussianClock> {
       ),
       body: Column(
         children: [
-          Expanded(child: Text(_currentTime.toString())),
+          Expanded(child: Center(child: Text(_currentTime.toString()))),
           Container(
               padding: const EdgeInsets.only(bottom: 10), child: _buttonRow())
         ],
