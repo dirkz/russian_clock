@@ -7,7 +7,8 @@ class Clock extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final r = min(size.height, size.width);
     final p = Paint();
-    canvas.drawCircle(const Offset(0, 0), r, p);
+    final center = Offset(size.width / 2, size.height / 2);
+    canvas.drawCircle(center, r, p);
   }
 
   @override
