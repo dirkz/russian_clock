@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
+import 'string_extension.dart';
+
 const _ruLang = "ru-RU";
 
 class Voices extends StatefulWidget {
@@ -45,12 +47,10 @@ class _VoicesState extends State<Voices> {
                 } else {
                   if (snapshot.data == true) {
                     return Center(
-                        child: Text('Have Russian as voice language',
-                            style: Theme.of(context).textTheme.titleLarge));
+                        child: 'Have Russian as voice language'.large(context));
                   } else {
                     return Center(
-                        child: Text('No Russian voice language',
-                            style: Theme.of(context).textTheme.titleLarge));
+                        child: 'No Russian voice language'.large(context));
                   }
                 }
             }

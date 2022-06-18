@@ -7,6 +7,7 @@ import 'clock.dart';
 import 'time.dart';
 import 'russian_time.dart';
 import 'voices.dart';
+import 'string_extension.dart';
 
 void main() {
   runApp(const MyApp());
@@ -83,10 +84,7 @@ class _RussianClockState extends State<RussianClock> {
                           ));
                     },
                   ))),
-          Expanded(
-              child: Center(
-                  child: Text(_solution ?? "",
-                      style: Theme.of(context).textTheme.titleLarge))),
+          Expanded(child: Center(child: (_solution ?? "").large(context))),
           Container(
               padding: const EdgeInsets.only(bottom: margin),
               child: _buttonRow())
