@@ -5,9 +5,9 @@ class TTS {
 
   Future<bool> haveRu() {
     return Future(() async {
-      final languages = await _flutterTts.getLanguages;
+      final languages = await _tts.getLanguages;
       if (languages.contains(ruLang)) {
-        _flutterTts.setLanguage(ruLang);
+        _tts.setLanguage(ruLang);
         return true;
       } else {
         return false;
@@ -16,15 +16,15 @@ class TTS {
   }
 
   languages() {
-    return _flutterTts.getLanguages;
+    return _tts.getLanguages;
   }
 
   Future<bool> speak(String text) {
-    return _flutterTts.speak(text).then((value) => _oneToTrue(value));
+    return _tts.speak(text).then((value) => _oneToTrue(value));
   }
 
   Future<bool> stop() {
-    return _flutterTts.stop().then((value) => _oneToTrue(value));
+    return _tts.stop().then((value) => _oneToTrue(value));
   }
 
   bool _oneToTrue(int value) {
@@ -35,5 +35,5 @@ class TTS {
     }
   }
 
-  final FlutterTts _flutterTts = FlutterTts();
+  final FlutterTts _tts = FlutterTts();
 }
