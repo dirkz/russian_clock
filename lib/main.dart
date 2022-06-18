@@ -98,24 +98,26 @@ class _RussianClockState extends State<RussianClock> {
     );
   }
 
+  _speak() {
+      var textToSpeak = _solution;
+      if (_canSpeak && textToSpeak != null) {
+        RegExp re = RegExp(r'\u0301');
+        textToSpeak = textToSpeak.replaceAll(re, '');
+        _tts.stop();
+        _tts.speak(textToSpeak);
+      }
+  }
+
   _onSolvePressed() {
     setState(() {
       _solutionState = SolutionState.solved;
       _solution = RussianTime.time(_currentTime);
-      final textToSpeak = _solution;
-      if (_canSpeak && textToSpeak != null) {
-        _tts.stop();
-        _tts.speak(textToSpeak);
-      }
+      _speak();
     });
   }
 
   _onRepeatSpeechPressed() {
-    final textToSpeak = _solution;
-    if (_canSpeak && textToSpeak != null) {
-      _tts.stop();
-      _tts.speak(textToSpeak);
-    }
+    _speak();
   }
 
   _onNextPressed() {
