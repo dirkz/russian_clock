@@ -20,7 +20,7 @@ class Clock extends CustomPainter {
 
     final clockRadius =
         min(size.height, size.width) / 2 - paintCircle.strokeWidth;
-    const minuteMarkLength = 10.0;
+    const minuteMarkLength = 8.0;
     const hourMarkLength = minuteMarkLength * 2;
     final minuteHandLength = clockRadius - minuteMarkLength - 20;
     final hourHandLength = minuteHandLength / 2;
