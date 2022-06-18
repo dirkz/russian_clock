@@ -86,6 +86,18 @@ void main() {
   });
 
   test('genitiveOrdinalHour', () {
+    expect(RussianTime.genitiveOrdinalHour(0), "двена́дцатого");
+    expect(RussianTime.genitiveOrdinalHour(1), "пе́рвого");
+    expect(RussianTime.genitiveOrdinalHour(2), "второ́го");
+    expect(RussianTime.genitiveOrdinalHour(3), "тре́тьего");
+    expect(RussianTime.genitiveOrdinalHour(4), "четвёртого");
     expect(RussianTime.genitiveOrdinalHour(5), "пя́того");
+    expect(RussianTime.genitiveOrdinalHour(6), "шесто́го");
+    expect(RussianTime.genitiveOrdinalHour(7), "седьмо́го");
+    expect(RussianTime.genitiveOrdinalHour(8), "восьмо́го");
+    expect(RussianTime.genitiveOrdinalHour(9), "девя́того");
+    expect(RussianTime.genitiveOrdinalHour(10), "деся́того");
+    expect(RussianTime.genitiveOrdinalHour(11), "оди́ннадцатого");
+    expect(RussianTime.genitiveOrdinalHour(12), "двена́дцатого");
   });
 }
