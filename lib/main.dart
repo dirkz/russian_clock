@@ -22,8 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Russian Clock',
       theme: ThemeData(
-          primarySwatch: Colors.grey,
-          textTheme: GoogleFonts.vollkornTextTheme()),
+          primarySwatch: Colors.grey),
       home: RussianClock(
         title: 'Russian Clock',
         random: Random.secure(),
