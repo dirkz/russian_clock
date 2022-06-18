@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'clock.dart';
 import 'time.dart';
+import 'russian_time.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,6 +45,7 @@ class _RussianClockState extends State<RussianClock> {
 
   var _solutionState = SolutionState.unsolved;
   HourMinute _currentTime;
+  String? _solution = null;
 
   @override
   Widget build(BuildContext context) {
@@ -57,8 +59,10 @@ class _RussianClockState extends State<RussianClock> {
               child: SizedBox(
                   width: double.infinity,
                   child: CustomPaint(
-                      foregroundPainter: Clock(time: _currentTime),
-                      child: Text(_currentTime.toString()),))),
+                    foregroundPainter: Clock(time: _currentTime),
+                  ))),
+          Container(
+              padding: const EdgeInsets.only(top: 10, bottom: 40), child: Text(_solution ?? "")),
           Container(
               padding: const EdgeInsets.only(bottom: 10), child: _buttonRow())
         ],
@@ -68,8 +72,8 @@ class _RussianClockState extends State<RussianClock> {
 
   _onSolvePressed() {
     setState(() {
-      _solutionState = SolutionState.unsolved;
-      _currentTime = HourMinute.random(random: widget.random);
+      _solution = RussianTime.time(_currentTime);
+      _solutionState = SolutionState.solved;
     });
   }
 
