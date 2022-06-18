@@ -5,13 +5,13 @@ class RussianTime {
     int plusOneHour(int hour) {
       return (hour + 1) % 12 + 1;
     }
-    
+
     if (time.minute == 30) {
-      return "полови́на" + " " % (genitiveOrdinalHour (plusOneHour(time.hour));
+      return "полови́на ${genitiveOrdinalHour(plusOneHour(time.hour))}";
     }
 
     if (time.hour == 0 && time.minute == 0) {
-      return nominativeHour(12) + " часо́в";
+      return "${nominativeHour(12)} часо́в";
     }
 
     if (time.hour == 1 && time.minute == 0) {
@@ -19,14 +19,15 @@ class RussianTime {
     }
 
     if (time.minute == 0) {
-      return nominativeHour(time.hour) + " " + hourAfterNumber(time.hour);
+      return "${nominativeHour(time.hour)} ${hourAfterNumber(time.hour)}";
     }
 
     if (time.minute < 30) {
-      return nominativeMinute(time.minute) + " " + minuteAfterNumber(time.minute) + " " + genitiveOrdinalHour(plusOneHour(time.hour));
+      return "${nominativeMinute(time.minute)} ${minuteAfterNumber(time.minute)} "
+          "${genitiveOrdinalHour(plusOneHour(time.hour))}";
     }
 
-    
+    return "без ${genitiveMinute(60 - time.minute)} ${nominativeHour(plusOneHour(time.hour))}";
   }
 
   static String minuteAfterNumber(int n) {
