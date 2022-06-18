@@ -94,6 +94,11 @@ class _RussianClockState extends State<RussianClock> {
     setState(() {
       _solutionState = SolutionState.solved;
       _solution = RussianTime.time(_currentTime);
+      final textToSpeak = _solution;
+      if (_canSpeak && textToSpeak != null) {
+        print("*** speak $textToSpeak");
+        _tts.speak(textToSpeak);
+      }
     });
   }
 
@@ -133,4 +138,5 @@ class _RussianClockState extends State<RussianClock> {
   HourMinute _currentTime;
   String? _solution;
   final _tts = TTS();
+  bool _canSpeak = false;
 }
