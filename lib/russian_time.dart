@@ -1,4 +1,34 @@
+import 'time.dart';
+
 class RussianTime {
+  static String time(HourMinute time) {
+    int plusOneHour(int hour) {
+      return (hour + 1) % 12 + 1;
+    }
+    
+    if (time.minute == 30) {
+      return "полови́на" + " " % (genitiveOrdinalHour (plusOneHour(time.hour));
+    }
+
+    if (time.hour == 0 && time.minute == 0) {
+      return nominativeHour(12) + " часо́в";
+    }
+
+    if (time.hour == 1 && time.minute == 0) {
+      return "час";
+    }
+
+    if (time.minute == 0) {
+      return nominativeHour(time.hour) + " " + hourAfterNumber(time.hour);
+    }
+
+    if (time.minute < 30) {
+      return nominativeMinute(time.minute) + " " + minuteAfterNumber(time.minute) + " " + genitiveOrdinalHour(plusOneHour(time.hour));
+    }
+
+    
+  }
+
   static String minuteAfterNumber(int n) {
     if (11 <= n && n <= 19) {
       return "мину́т";
