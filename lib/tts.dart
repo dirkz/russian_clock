@@ -26,7 +26,14 @@ class TTS {
     return _tts.stop().then((value) => _numberToBool(value));
   }
 
-  Future<bool> setLanguage(String language) {
+  Future<bool> setLanguage(String language) async {
+    final voices = await _tts.getVoices;
+    for (var voice in voices) {
+      if (voice['locale'] == language) {
+        final voiceMap = <String, String>{'locale': language, 'name': voice['name']};
+        return _tts.setVoice(voiceMap).then((value) => _numberToBool(value));
+      }
+    }
     return _tts.setLanguage(language).then((value) => _numberToBool(value));
   }
 
