@@ -75,7 +75,10 @@ class _RussianClockState extends State<RussianClock> {
                           ));
                     },
                   ))),
-          Expanded(child: Center(child: Text(_solution ?? ""))),
+          Expanded(
+              child: Center(
+                  child: Text(_solution ?? "",
+                      style: Theme.of(context).textTheme.titleLarge))),
           Container(
               padding: const EdgeInsets.only(bottom: margin),
               child: _buttonRow())
