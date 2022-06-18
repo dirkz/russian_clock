@@ -1,4 +1,4 @@
-import 'package:flutter_tts/flutter_tts.dart';
+import 'package:tts_plugin/tts_plugin.dart';
 
 class TTS {
   static const languageRU = "ru-RU";
@@ -14,44 +14,32 @@ class TTS {
     });
   }
 
-  Future<List<String>> languages() {
-    return _tts.getLanguages.then((value) => _toStringList(value));
+  Future<List<String>> languages() async {
+    final voices = await _tts.getVoices();
+    var languageSet = <String>[];
+    for (var voice in voices) {
+      languageSet.add(voice.language);
+    }
+    return languageSet.toList();
   }
 
   Future<bool> speak(String text) {
-    return _tts.speak(text).then((value) => _numberToBool(value));
+    return _tts.speak(text);
   }
 
   Future<bool> stop() {
-    return _tts.stop().then((value) => _numberToBool(value));
+    return _tts.cancel();
   }
 
   Future<bool> setLanguage(String language) async {
-    final voices = await _tts.getVoices;
-    for (var voice in voices) {
-      if (voice['locale'] == language) {
-        final voiceMap = <String, String>{'locale': language, 'name': voice['name']};
-        return _tts.setVoice(voiceMap).then((value) => _numberToBool(value));
+    final allVoices = await _tts.getVoices();
+    for (var voice in allVoices) {
+      if (voice.language == language) {
+        return _tts.setVoice(voice);
       }
     }
-    return _tts.setLanguage(language).then((value) => _numberToBool(value));
+    return false;
   }
 
-  bool _numberToBool(int value) {
-    if (value == 1) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  List<String> _toStringList(List<Object?> objects) {
-    final languages = <String>[];
-    for (var obj in objects) {
-      languages.add(obj as String);
-    }
-    return languages;
-  }
-
-  final _tts = FlutterTts();
+  final _tts = TtsPlugin();
 }

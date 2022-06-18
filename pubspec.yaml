@@ -29,7 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_tts: 3.4.0
+  tts_plugin:
+    path: ../tts_plugin
 
 
   # The following adds the Cupertino Icons font to your application.
