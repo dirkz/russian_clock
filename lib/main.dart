@@ -50,6 +50,9 @@ class _RussianClockState extends State<RussianClock> {
 
   @override
   Widget build(BuildContext context) {
+    // top/bottom in some places
+    const margin = 10.0;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -58,20 +61,24 @@ class _RussianClockState extends State<RussianClock> {
         children: [
           Expanded(
               flex: 2,
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  final dim = min(constraints.maxHeight, constraints.maxWidth);
-                  return SizedBox(
-                      width: dim,
-                      height: dim,
-                      child: CustomPaint(
-                        foregroundPainter: Clock(time: _currentTime),
-                      ));
-                },
-              )),
+              child: Container(
+                  padding: const EdgeInsets.only(top: margin, bottom: margin),
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      final dim =
+                          min(constraints.maxHeight, constraints.maxWidth);
+                      return SizedBox(
+                          width: dim,
+                          height: dim,
+                          child: CustomPaint(
+                            foregroundPainter: Clock(time: _currentTime),
+                          ));
+                    },
+                  ))),
           Expanded(child: Center(child: Text(_solution ?? ""))),
           Container(
-              padding: const EdgeInsets.only(bottom: 10), child: _buttonRow())
+              padding: const EdgeInsets.only(bottom: margin),
+              child: _buttonRow())
         ],
       ),
     );
