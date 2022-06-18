@@ -103,6 +103,7 @@ class _RussianClockState extends State<RussianClock> {
       final textToSpeak = _solution;
       if (_canSpeak && textToSpeak != null) {
         print("*** speak $textToSpeak");
+        _tts.stop();
         _tts.speak(textToSpeak);
       }
     });

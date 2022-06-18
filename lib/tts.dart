@@ -20,13 +20,19 @@ class TTS {
   }
 
   Future<bool> speak(String text) {
-    return _flutterTts.speak(text).then((value) {
-      if (value == 1) {
-        return true;
-      } else {
-        return false;
-      }
-    });
+    return _flutterTts.speak(text).then((value) => _oneToTrue(value));
+  }
+
+  Future<bool> stop() {
+    return _flutterTts.stop().then((value) => _oneToTrue(value));
+  }
+
+  bool _oneToTrue(int value) {
+    if (value == 1) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   final FlutterTts _flutterTts = FlutterTts();
