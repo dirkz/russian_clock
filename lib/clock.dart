@@ -55,7 +55,7 @@ class Clock extends CustomPainter {
         radius: r - hourDistanceFromOuter, radians: hourRad, center: center);
     final offsetHourInner =
         _offsetOnCircle(radius: centerRadius, radians: hourRad, center: center);
-    //canvas.drawLine(offsetHourOuter, offsetHourInner, paintHand);
+    canvas.drawLine(offsetHourOuter, offsetHourInner, paintHand);
 
     final minuteRad = time.minute * 2 * pi / 60;
     const minuteDistanceFromOuter = 30;
