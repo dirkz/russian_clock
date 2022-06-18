@@ -19,5 +19,15 @@ class TTS {
     return _flutterTts.getLanguages;
   }
 
+  Future<bool> speak(String text) {
+    return _flutterTts.speak(text).then((value) {
+      if (value == 1) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+  }
+
   final FlutterTts _flutterTts = FlutterTts();
 }
