@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'clock.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -69,7 +71,11 @@ class _RussianClockState extends State<RussianClock> {
       ),
       body: Column(
         children: [
-          Expanded(child: Center(child: Text(_currentTime.toString()))),
+          Expanded(
+              child: Center(
+                  child: CustomPaint(
+            foregroundPainter: Clock(),
+          ))),
           Container(
               padding: const EdgeInsets.only(bottom: 10), child: _buttonRow())
         ],
