@@ -39,7 +39,7 @@ class RussianClock extends StatefulWidget {
   State<RussianClock> createState() => _RussianClockState();
 }
 
-enum SolutionState { unsolved, solved }
+enum _SolutionState { unsolved, solved }
 
 class _RussianClockState extends State<RussianClock> {
   _RussianClockState() : _currentTime = HourMinute.random();
@@ -114,21 +114,21 @@ class _RussianClockState extends State<RussianClock> {
 
   _onSolvePressed() {
     setState(() {
-      _solutionState = SolutionState.solved;
+      _solutionState = _SolutionState.solved;
       _solution = RussianTime.time(_currentTime);
       _speak();
     });
   }
 
   _onRepeatSpeechPressed() {
-    if (_solutionState == SolutionState.solved) {
+    if (_solutionState == _SolutionState.solved) {
       _speak();
     }
   }
 
   _onNextPressed() {
     setState(() {
-      _solutionState = SolutionState.unsolved;
+      _solutionState = _SolutionState.unsolved;
       _solution = null;
       _currentTime = HourMinute.random(random: widget.random);
     });
@@ -143,11 +143,11 @@ class _RussianClockState extends State<RussianClock> {
   _buttonRow() {
     var buttons = <Widget>[];
     switch (_solutionState) {
-      case SolutionState.unsolved:
+      case _SolutionState.unsolved:
         buttons.add(ElevatedButton(
             onPressed: _onSolvePressed, child: const Text("Solve")));
         break;
-      case SolutionState.solved:
+      case _SolutionState.solved:
         buttons.add(ElevatedButton(
             onPressed: _onNextPressed, child: const Text("Next")));
         break;
@@ -164,7 +164,7 @@ class _RussianClockState extends State<RussianClock> {
     );
   }
 
-  var _solutionState = SolutionState.unsolved;
+  var _solutionState = _SolutionState.unsolved;
   HourMinute _currentTime;
   String? _solution;
   final _tts = TTS();
