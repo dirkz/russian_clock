@@ -1,12 +1,13 @@
 class RussianTime {
   static String minuteAfterNumber(int n) {
     if (11 <= n && n <= 19) {
-        return "мину́т";
+      return "мину́т";
     }
 
     final tester = n % 10;
-    
-    switch (tester % 10) { // TODO: Check 0
+
+    switch (tester % 10) {
+      // TODO: Check 0
       case 1:
         return "мину́та";
       case 2:
@@ -29,11 +30,12 @@ class RussianTime {
 
   static String hourAfterNumber(int n) {
     if (11 <= n && n <= 19) {
-        return "часо́в";
+      return "часо́в";
     }
     final tester = n % 10;
-    
-    switch (tester % 10) { // TODO: Check 0
+
+    switch (tester % 10) {
+      // TODO: Check 0
       case 1:
         return "час";
       case 2:
@@ -47,8 +49,32 @@ class RussianTime {
 
   static String genitiveOrdinalHour(int n) {
     switch (n) {
+      case 0:
+        return "двена́дцатого";
       case 1:
         return "пе́рвого";
+      case 2:
+        return "второ́го";
+      case 3:
+        return "тре́тьего";
+      case 4:
+        return "четвёртого";
+      case 5:
+        return "пя́того";
+      case 6:
+        return "шесто́го";
+      case 7:
+        return "седьмо́го";
+      case 8:
+        return "восьмо́го";
+      case 9:
+        return "девя́того";
+      case 10:
+        return "деся́того";
+      case 11:
+        return "оди́ннадцатого";
+      case 12:
+        return "двена́дцатого";
       default:
         throw ArgumentError.value(n, "n");
     }
