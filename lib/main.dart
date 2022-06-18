@@ -56,7 +56,7 @@ class _RussianClockState extends State<RussianClock> {
       body: Column(
         children: [
           Expanded(
-              flex: 2,
+              flex: 5,
               child: Container(
                   padding: const EdgeInsets.all(10),
                   width: double.infinity,
