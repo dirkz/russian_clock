@@ -84,7 +84,7 @@ class _RussianClockState extends State<RussianClock> {
                           ));
                     },
                   ))),
-          Expanded(child: Center(child: (_solution ?? "").large(context))),
+          Expanded(child: Center(child: (_solution ?? "").largeText(context))),
           Container(
               padding: const EdgeInsets.only(bottom: margin),
               child: _buttonRow())

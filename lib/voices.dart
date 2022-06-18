@@ -47,10 +47,10 @@ class _VoicesState extends State<Voices> {
                 } else {
                   if (snapshot.data == true) {
                     return Center(
-                        child: 'Have Russian as voice language'.large(context));
+                        child: 'Have Russian as voice language'.largeText(context));
                   } else {
                     return Center(
-                        child: 'No Russian voice language'.large(context));
+                        child: 'No Russian voice language'.largeText(context));
                   }
                 }
             }
