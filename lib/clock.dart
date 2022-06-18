@@ -98,7 +98,8 @@ class Clock extends CustomPainter {
     required double radius,
     required double radians,
   }) {
+    final rad = -(radians - 2 * pi / 4);
     return Offset(
-        center.dx + radius * cos(radians), center.dy + radius * sin(radians));
+        center.dx + radius * cos(rad), center.dy + radius * sin(rad));
   }
 }
