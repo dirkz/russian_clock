@@ -1,11 +1,11 @@
-import 'package:flutter_tts/flutter_tts.dart';
+import 'package:text_to_speech/text_to_speech.dart';
 
 class TTS {
   static const languageRU = "ru-RU";
 
   Future<bool> haveLanguageRU() {
     return Future(() async {
-      final languages = await _tts.getLanguages;
+      final languages = await _tts.getLanguages();
       if (languages.contains(languageRU)) {
         return true;
       } else {
@@ -14,29 +14,29 @@ class TTS {
     });
   }
 
-  languages() {
-    return _tts.getLanguages;
+  Future<List<String>> languages() {
+    return _tts.getLanguages();
   }
 
   Future<bool> speak(String text) {
-    return _tts.speak(text).then((value) => _oneToTrue(value));
+    return _tts.speak(text).then((value) => _optionalBoolToBool(value));
   }
 
   Future<bool> stop() {
-    return _tts.stop().then((value) => _oneToTrue(value));
+    return _tts.stop().then((value) => _optionalBoolToBool(value));
   }
 
   Future<bool> setLanguage(String language) {
-    return _tts.setLanguage(language).then((value) => _oneToTrue(value));
+    return _tts.setLanguage(language).then((value) => _optionalBoolToBool(value));
   }
 
-  bool _oneToTrue(int value) {
-    if (value == 1) {
+  bool _optionalBoolToBool(bool? value) {
+    if (value == true) {
       return true;
     } else {
       return false;
     }
   }
 
-  final FlutterTts _tts = FlutterTts();
+  final _tts = TextToSpeech();
 }
