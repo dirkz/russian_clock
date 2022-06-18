@@ -56,10 +56,10 @@ class HourMinute {
 enum SolutionState { unsolved, solved }
 
 class _RussianClockState extends State<RussianClock> {
+  _RussianClockState() : _currentTime = HourMinute(hour: 0, minute: 0);
+
   var _solutionState = SolutionState.unsolved;
   HourMinute _currentTime;
-
-  _RussianClockState() : _currentTime = HourMinute(hour: 0, minute: 0);
 
   @override
   Widget build(BuildContext context) {
