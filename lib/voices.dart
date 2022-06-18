@@ -20,7 +20,7 @@ class _VoicesState extends State<Voices> {
           title: const Text("Voices"),
         ),
         body: FutureBuilder<bool>(
-          future: _tts.haveRu(), // async work
+          future: _tts.haveLanguageRU(), // async work
           builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
             switch (snapshot.connectionState) {
               case ConnectionState.waiting:

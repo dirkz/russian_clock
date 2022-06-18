@@ -1,13 +1,12 @@
 import 'package:flutter_tts/flutter_tts.dart';
 
 class TTS {
-  static const ruLang = "ru-RU";
+  static const languageRU = "ru-RU";
 
-  Future<bool> haveRu() {
+  Future<bool> haveLanguageRU() {
     return Future(() async {
       final languages = await _tts.getLanguages;
-      if (languages.contains(ruLang)) {
-        _tts.setLanguage(ruLang);
+      if (languages.contains(languageRU)) {
         return true;
       } else {
         return false;
@@ -25,6 +24,10 @@ class TTS {
 
   Future<bool> stop() {
     return _tts.stop().then((value) => _oneToTrue(value));
+  }
+
+  Future<bool> setLanguage(String language) {
+    return _tts.setLanguage(language).then((value) => _oneToTrue(value));
   }
 
   bool _oneToTrue(int value) {
