@@ -3,7 +3,7 @@ import 'time.dart';
 class RussianTime {
   static String time(HourMinute time) {
     int plusOneHour(int hour) {
-      return (hour + 1) % 12 + 1;
+      return (hour + 1) % 12;
     }
 
     if (time.minute == 30) {
