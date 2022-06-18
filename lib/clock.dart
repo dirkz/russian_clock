@@ -19,17 +19,27 @@ class Clock extends CustomPainter {
     final center = Offset(size.width / 2, size.height / 2);
     canvas.drawCircle(center, r, pCircle);
 
-    final paintHourMark = Paint();
-    paintHourMark.style = PaintingStyle.fill;
-    paintHourMark.strokeWidth = 4;
+    final paintMark = Paint();
+    paintMark.style = PaintingStyle.fill;
+    paintMark.strokeWidth = 4;
 
     _drawMarks(
-        paint: paintHourMark,
+        paint: paintMark,
         center: center,
         canvas: canvas,
         lineLingth: 20,
         radius: r,
         radSpacing: 2 * pi / 12);
+
+    paintMark.strokeWidth = 2;
+
+    _drawMarks(
+        paint: paintMark,
+        center: center,
+        canvas: canvas,
+        lineLingth: 10,
+        radius: r,
+        radSpacing: 2 * pi / 60);
   }
 
   @override
