@@ -27,7 +27,12 @@ class RussianTime {
           "${genitiveOrdinalHour(plusOneHour(time.hour))}";
     }
 
-    return "без ${genitiveMinute(60 - time.minute)} ${nominativeHour(plusOneHour(time.hour))}";
+    int untilMinute = 60 - time.minute;
+    var untilMinuteString = " ";
+    if (untilMinute % 5 != 0) {
+      untilMinuteString = " ${genitiveMinuteAfterNumber(untilMinute)} ";
+    }
+    return "без ${genitiveMinute(untilMinute)}$untilMinuteString${nominativeHour(plusOneHour(time.hour))}";
   }
 
   static String minuteAfterNumber(int n) {
