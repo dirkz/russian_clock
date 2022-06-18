@@ -19,9 +19,6 @@ class Clock extends CustomPainter {
     final center = Offset(size.width / 2, size.height / 2);
     canvas.drawCircle(center, r, paintCircle);
 
-    paintCircle.strokeWidth = 1;
-    canvas.drawCircle(center, 5, paintCircle);
-
     final paintMark = Paint();
     paintMark.style = PaintingStyle.fill;
     paintMark.strokeWidth = 4;
@@ -43,6 +40,17 @@ class Clock extends CustomPainter {
         lineLingth: 10,
         radius: r,
         radSpacing: 2 * pi / 60);
+
+    const centerRadius = 5.0;
+    paintCircle.strokeWidth = 1;
+    canvas.drawCircle(center, centerRadius, paintCircle);
+
+    final hourRad = time.hour % 12 * 2 * pi / 12;
+    final offsetOuter = _offsetOnCircle(
+        radius: r - 20,
+        radians: hourRad,
+        xOffset: center.dx,
+        yOffset: center.dy);
   }
 
   @override
