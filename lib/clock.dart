@@ -19,6 +19,9 @@ class Clock extends CustomPainter {
     final center = Offset(size.width / 2, size.height / 2);
     canvas.drawCircle(center, r, paintCircle);
 
+    paintCircle.strokeWidth = 1;
+    canvas.drawCircle(center, 5, paintCircle);
+
     final paintMark = Paint();
     paintMark.style = PaintingStyle.fill;
     paintMark.strokeWidth = 4;
