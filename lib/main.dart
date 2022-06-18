@@ -77,7 +77,12 @@ class _RussianClockState extends State<RussianClock> {
     );
   }
 
-  _onSolvePressed() {}
+  _onSolvePressed() {
+    setState(() {
+      _solutionState = SolutionState.unsolved;
+      _currentTime = HourMinute.random(random: widget.random);
+    });
+  }
 
   _onRepeatSpeechPressed() {}
 
