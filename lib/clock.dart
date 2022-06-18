@@ -52,19 +52,19 @@ class Clock extends CustomPainter {
     final hourRad = time.hour % 12 * 2 * pi / 12;
     const hourDistanceFromOuter = 60;
     final offsetHourOuter = _offsetOnCircle(
-        radius: r - hourDistanceFromOuter, radians: hourRad, offset: center);
+        radius: r - hourDistanceFromOuter, radians: hourRad, center: center);
     final offsetHourInner =
-        _offsetOnCircle(radius: centerRadius, radians: hourRad, offset: center);
-    canvas.drawLine(offsetHourOuter, offsetHourInner, paintHand);
+        _offsetOnCircle(radius: centerRadius, radians: hourRad, center: center);
+    //canvas.drawLine(offsetHourOuter, offsetHourInner, paintHand);
 
     final minuteRad = time.minute * 2 * pi / 60;
     const minuteDistanceFromOuter = 30;
     final offsetMinuteOuter = _offsetOnCircle(
         radius: r - minuteDistanceFromOuter,
         radians: minuteRad,
-        offset: center);
+        center: center);
     final offsetMinuteInner = _offsetOnCircle(
-        radius: centerRadius, radians: minuteRad, offset: center);
+        radius: centerRadius, radians: minuteRad, center: center);
     canvas.drawLine(offsetMinuteOuter, offsetMinuteInner, paintHand);
   }
 
@@ -82,19 +82,20 @@ class Clock extends CustomPainter {
       required double radSpacing}) {
     for (double rad = 0; rad < 2 * pi; rad = rad + radSpacing) {
       final offsetOuter =
-          _offsetOnCircle(radius: radius, radians: rad, offset: center);
+          _offsetOnCircle(radius: radius, radians: rad, center: center);
       final offsetInner = _offsetOnCircle(
-          radius: radius - lineLingth, radians: rad, offset: center);
+          radius: radius - lineLingth, radians: rad, center: center);
       canvas.drawLine(offsetOuter, offsetInner, paint);
     }
   }
 
+  /// Point on a circle.
   _offsetOnCircle({
+    required Offset center,
     required double radius,
     required double radians,
-    required Offset offset,
   }) {
     return Offset(
-        radius * cos(radians) + offset.dx, radius * sin(radians) + offset.dy);
+        center.dx + radius * cos(radians), center.dy + radius * sin(radians));
   }
 }
