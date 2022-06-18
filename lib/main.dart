@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'clock.dart';
 import 'time.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Russian Clock',
-      theme: ThemeData(primarySwatch: Colors.grey),
+      theme: ThemeData(
+          primarySwatch: Colors.grey, textTheme: GoogleFonts.robotoTextTheme()),
       home: RussianClock(
         title: 'Russian Clock',
         random: Random.secure(),
