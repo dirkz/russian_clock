@@ -60,7 +60,6 @@ class _RussianClockState extends State<RussianClock> {
       ),
       body: Column(
         children: [
-          Text(_currentTime.toString()),
           Expanded(
               flex: 4,
               child: Container(
