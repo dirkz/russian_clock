@@ -11,12 +11,15 @@ class Clock extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    canvas.translate(size.width/2, size.height/2);
+    canvas.scale(1, -1);
+
     final paintCircle = Paint();
     paintCircle.style = PaintingStyle.stroke;
     paintCircle.strokeWidth = 4;
 
     final r = min(size.height, size.width) / 2 - paintCircle.strokeWidth;
-    final center = Offset(size.width / 2, size.height / 2);
+    const center = Offset(0, 0);
     canvas.drawCircle(center, r, paintCircle);
 
     final paintMark = Paint();
