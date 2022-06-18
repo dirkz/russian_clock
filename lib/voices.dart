@@ -14,8 +14,8 @@ class _VoicesState extends State<Voices> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Title"),
+          title: const Text("Voices"),
         ),
-        body: Text(""));
+        body: const Text("Voices here"));
   }
 }
