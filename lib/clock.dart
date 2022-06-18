@@ -11,13 +11,13 @@ class Clock extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final pCircle = Paint();
-    pCircle.style = PaintingStyle.stroke;
-    pCircle.strokeWidth = 4;
+    final paintCircle = Paint();
+    paintCircle.style = PaintingStyle.stroke;
+    paintCircle.strokeWidth = 4;
 
-    final r = min(size.height, size.width) / 2 - pCircle.strokeWidth;
+    final r = min(size.height, size.width) / 2 - paintCircle.strokeWidth;
     final center = Offset(size.width / 2, size.height / 2);
-    canvas.drawCircle(center, r, pCircle);
+    canvas.drawCircle(center, r, paintCircle);
 
     final paintMark = Paint();
     paintMark.style = PaintingStyle.fill;
