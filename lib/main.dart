@@ -52,6 +52,15 @@ class _RussianClockState extends State<RussianClock> {
 
   @override
   Widget build(BuildContext context) {
+    Function() _inwellTap() {
+      switch (_solutionState) {
+        case _SolutionState.solved:
+          return _onRepeatSpeechPressed;
+        case _SolutionState.unsolved:
+          return _onSolvePressed;
+      }
+    }
+    
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
@@ -64,7 +73,7 @@ class _RussianClockState extends State<RussianClock> {
           ],
         ),
         body: InkWell(
-          onTap: _onRepeatSpeechPressed,
+          onTap: _inwellTap(),
           child: Column(
             children: [
               Expanded(
