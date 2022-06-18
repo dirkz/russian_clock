@@ -8,6 +8,7 @@ import 'time.dart';
 import 'russian_time.dart';
 import 'voices.dart';
 import 'string_extension.dart';
+import 'tts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,10 +46,6 @@ enum SolutionState { unsolved, solved }
 
 class _RussianClockState extends State<RussianClock> {
   _RussianClockState() : _currentTime = HourMinute.random();
-
-  var _solutionState = SolutionState.unsolved;
-  HourMinute _currentTime;
-  String? _solution;
 
   @override
   Widget build(BuildContext context) {
@@ -131,4 +128,9 @@ class _RussianClockState extends State<RussianClock> {
       children: buttons,
     );
   }
+
+  var _solutionState = SolutionState.unsolved;
+  HourMinute _currentTime;
+  String? _solution;
+  final _tts = TTS();
 }
