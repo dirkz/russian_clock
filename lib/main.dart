@@ -60,9 +60,9 @@ class _RussianClockState extends State<RussianClock> {
       body: Column(
         children: [
           Expanded(
-              flex: 2,
+              flex: 4,
               child: Container(
-                  padding: const EdgeInsets.only(top: margin, bottom: margin),
+                  padding: const EdgeInsets.all(margin),
                   child: LayoutBuilder(
                     builder: (context, constraints) {
                       final dim =
