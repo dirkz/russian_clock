@@ -11,6 +11,7 @@ class Clock extends CustomPainter {
   
   @override
   void paint(Canvas canvas, Size size) {
+    print("paint size $size");
     final r = min(size.height, size.width);
     final p = Paint();
     p.style = PaintingStyle.stroke;
