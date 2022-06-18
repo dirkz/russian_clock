@@ -6,15 +6,13 @@ class RussianTime {
 
     final tester = n % 10;
     
-    switch (tester % 5) {
+    switch (tester % 10) { // TODO: Check 0
       case 1:
         return "мину́та";
       case 2:
       case 3:
       case 4:
         return "мину́ты";
-      case 0: // TODO: Check
-      case 5:
       default:
         return "мину́т";
     }
